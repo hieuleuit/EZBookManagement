@@ -83,6 +83,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Test github.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test github.Designer.cs">
+      <DependentUpon>Test github.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookstoreManagementApp_BUS\BookstoreManagementApp_BUS.csproj">
@@ -113,6 +119,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test github.resx">
+      <DependentUpon>Test github.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
