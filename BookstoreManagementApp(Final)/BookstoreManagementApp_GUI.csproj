@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BookstoreManagementApp_Final_</RootNamespace>
     <AssemblyName>BookstoreManagementApp%28Final%29</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,6 +35,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -64,6 +68,14 @@
     <Compile Include="EmployeeSaleForm.Designer.cs">
       <DependentUpon>EmployeeSaleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EzManageDataSet.cs">
+      <DependentUpon>EzManageDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EzManageDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EzManageDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginAccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,17 +95,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Test github.cs">
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TestF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Test github.Designer.cs">
-      <DependentUpon>Test github.cs</DependentUpon>
+    <Compile Include="TestF.Designer.cs">
+      <DependentUpon>TestF.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookstoreManagementApp_BUS\BookstoreManagementApp_BUS.csproj">
       <Project>{acad44f8-da7b-4c5c-aecf-71f0484ac75e}</Project>
       <Name>BookstoreManagementApp_BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookstoreManagementApp_DAL\BookstoreManagementApp_DAL.csproj">
+      <Project>{8F7C3E46-1C19-4BAF-9F21-5E940BC39039}</Project>
+      <Name>BookstoreManagementApp_DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\BookstoreManagementApp_DTO\BookstoreManagementApp_DTO.csproj">
       <Project>{ff2045c5-ec50-4d43-858e-bcaee1e5af0a}</Project>
@@ -120,11 +141,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Test github.resx">
-      <DependentUpon>Test github.cs</DependentUpon>
+    <EmbeddedResource Include="TestF.resx">
+      <DependentUpon>TestF.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="bin\Debug\ButtonAndFormImage\Login_eng.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +193,70 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\ButtonAndFormImage\Back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EzManageDataSet.xsc">
+      <DependentUpon>EzManageDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EzManageDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EzManageDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EzManageDataSet.xss">
+      <DependentUpon>EzManageDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Biggest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSVC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Biggest-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nv-tk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nv-tk1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nv-ql.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pn_nv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pn_nvlasttt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pn_nvlast1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Biggest-laststt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pn_nvreallast.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main_background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

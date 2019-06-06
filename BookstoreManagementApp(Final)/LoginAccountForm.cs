@@ -124,6 +124,8 @@ namespace BookstoreManagementApp_Final_
                     this.Hide();
 
                     managerForm.Show();
+                    /*TestF another_form = new TestF();
+                    another_form.Show();*/
                 }
 
                 // Nếu tk đăng nhập là ko hợp lệ
@@ -148,6 +150,10 @@ namespace BookstoreManagementApp_Final_
             if(MessageBox.Show("Are you sure you want to exit", "Notice", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.ExitThread();
+            }
+            else
+            {
+                e.Cancel = true;
             }
         }
     }
