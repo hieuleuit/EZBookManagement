@@ -10,12 +10,12 @@ namespace BookstoreManagementApp_BUS
 {
     public class EmployeePassManage_BUS
     {
-        EmployeePassManage_DAL employeePassManage = new EmployeePassManage_DAL(); // Đối tượng để thực thi các thao tác đối với GUI
+        Account_manage_DAL Account = new Account_manage_DAL(); // Đối tượng để thực thi các thao tác đối với GUI
 
         // Hàm gọi khi người dùng đăng nhập vào ứng dụng
         public int LoginAccount(string UserName, string Password)
         {
-            return employeePassManage.LoginAccount(UserName, Password);
+            return Account.LoginAccount(UserName, Password);
         }
     }
 }
