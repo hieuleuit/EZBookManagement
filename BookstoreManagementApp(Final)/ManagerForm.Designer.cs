@@ -54,8 +54,12 @@
             this.tb_phone = new System.Windows.Forms.TextBox();
             this.tb_id = new System.Windows.Forms.TextBox();
             this.tb_name = new System.Windows.Forms.TextBox();
+            this.pn_edit_save = new System.Windows.Forms.Panel();
+            this.pn_add_save = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_st)).BeginInit();
             this.pn_nv.SuspendLayout();
+            this.pn_edit_save.SuspendLayout();
+            this.pn_add_save.SuspendLayout();
             this.SuspendLayout();
             // 
             // bt_chart
@@ -140,7 +144,7 @@
             // 
             // bt_addnv
             // 
-            this.bt_addnv.Location = new System.Drawing.Point(441, 227);
+            this.bt_addnv.Location = new System.Drawing.Point(0, 2);
             this.bt_addnv.Margin = new System.Windows.Forms.Padding(2);
             this.bt_addnv.Name = "bt_addnv";
             this.bt_addnv.Size = new System.Drawing.Size(62, 30);
@@ -151,7 +155,7 @@
             // 
             // bt_delnv
             // 
-            this.bt_delnv.Location = new System.Drawing.Point(523, 227);
+            this.bt_delnv.Location = new System.Drawing.Point(552, 217);
             this.bt_delnv.Margin = new System.Windows.Forms.Padding(2);
             this.bt_delnv.Name = "bt_delnv";
             this.bt_delnv.Size = new System.Drawing.Size(62, 30);
@@ -162,7 +166,7 @@
             // 
             // bt_editnv
             // 
-            this.bt_editnv.Location = new System.Drawing.Point(603, 227);
+            this.bt_editnv.Location = new System.Drawing.Point(2, 2);
             this.bt_editnv.Margin = new System.Windows.Forms.Padding(2);
             this.bt_editnv.Name = "bt_editnv";
             this.bt_editnv.Size = new System.Drawing.Size(62, 30);
@@ -173,7 +177,7 @@
             // 
             // bt_savenv
             // 
-            this.bt_savenv.Location = new System.Drawing.Point(441, 262);
+            this.bt_savenv.Location = new System.Drawing.Point(2, 53);
             this.bt_savenv.Margin = new System.Windows.Forms.Padding(2);
             this.bt_savenv.Name = "bt_savenv";
             this.bt_savenv.Size = new System.Drawing.Size(62, 30);
@@ -191,12 +195,15 @@
             this.dgv_st.RowTemplate.Height = 24;
             this.dgv_st.Size = new System.Drawing.Size(839, 221);
             this.dgv_st.TabIndex = 11;
+            this.dgv_st.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_st_CellClick);
+            this.dgv_st.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_st_RowEnter);
             // 
             // pn_nv
             // 
-            this.pn_nv.BackgroundImage = global::BookstoreManagementApp_Final_.Properties.Resources.pn_nvreallast;
             this.pn_nv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pn_nv.Controls.Add(this.bt_esave);
+            this.pn_nv.Controls.Add(this.pn_add_save);
+            this.pn_nv.Controls.Add(this.pn_edit_save);
+            this.pn_nv.Controls.Add(this.bt_delnv);
             this.pn_nv.Controls.Add(this.rb_female);
             this.pn_nv.Controls.Add(this.rb_male);
             this.pn_nv.Controls.Add(this.cbb_role);
@@ -210,11 +217,7 @@
             this.pn_nv.Controls.Add(this.tb_phone);
             this.pn_nv.Controls.Add(this.tb_id);
             this.pn_nv.Controls.Add(this.tb_name);
-            this.pn_nv.Controls.Add(this.bt_editnv);
-            this.pn_nv.Controls.Add(this.bt_savenv);
             this.pn_nv.Controls.Add(this.dgv_st);
-            this.pn_nv.Controls.Add(this.bt_delnv);
-            this.pn_nv.Controls.Add(this.bt_addnv);
             this.pn_nv.Location = new System.Drawing.Point(186, 116);
             this.pn_nv.Margin = new System.Windows.Forms.Padding(2);
             this.pn_nv.Name = "pn_nv";
@@ -223,7 +226,7 @@
             // 
             // bt_esave
             // 
-            this.bt_esave.Location = new System.Drawing.Point(603, 262);
+            this.bt_esave.Location = new System.Drawing.Point(2, 55);
             this.bt_esave.Margin = new System.Windows.Forms.Padding(2);
             this.bt_esave.Name = "bt_esave";
             this.bt_esave.Size = new System.Drawing.Size(62, 30);
@@ -387,11 +390,28 @@
             this.tb_name.Size = new System.Drawing.Size(206, 21);
             this.tb_name.TabIndex = 12;
             // 
+            // pn_edit_save
+            // 
+            this.pn_edit_save.Controls.Add(this.bt_editnv);
+            this.pn_edit_save.Controls.Add(this.bt_esave);
+            this.pn_edit_save.Location = new System.Drawing.Point(630, 217);
+            this.pn_edit_save.Name = "pn_edit_save";
+            this.pn_edit_save.Size = new System.Drawing.Size(65, 85);
+            this.pn_edit_save.TabIndex = 29;
+            // 
+            // pn_add_save
+            // 
+            this.pn_add_save.Controls.Add(this.bt_addnv);
+            this.pn_add_save.Controls.Add(this.bt_savenv);
+            this.pn_add_save.Location = new System.Drawing.Point(473, 217);
+            this.pn_add_save.Name = "pn_add_save";
+            this.pn_add_save.Size = new System.Drawing.Size(63, 83);
+            this.pn_add_save.TabIndex = 30;
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BookstoreManagementApp_Final_.Properties.Resources.Biggest_laststt;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1036, 693);
             this.Controls.Add(this.pn_nv);
@@ -409,6 +429,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_st)).EndInit();
             this.pn_nv.ResumeLayout(false);
             this.pn_nv.PerformLayout();
+            this.pn_edit_save.ResumeLayout(false);
+            this.pn_add_save.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -441,5 +463,7 @@
         private System.Windows.Forms.RadioButton rb_female;
         private System.Windows.Forms.RadioButton rb_male;
         private System.Windows.Forms.Button bt_esave;
+        private System.Windows.Forms.Panel pn_add_save;
+        private System.Windows.Forms.Panel pn_edit_save;
     }
 }
