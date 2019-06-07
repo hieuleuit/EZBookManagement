@@ -21,7 +21,7 @@ namespace BookstoreManagementApp_DAL
             {
                 connection.Open(); // Mở kết nối đến database
 
-                string Select_all = "Select * from MATKHAUNV";
+                string Select_all = "SELECT * from PASSWORD";
 
                 SqlCommand sqlcmd = new SqlCommand(Select_all, connection); // Truy xuất dữ liệu từ database
                 SqlDataReader Data_reader = sqlcmd.ExecuteReader(); // biến để đọc dữ liệu truy xuất và lưu vào list
@@ -68,25 +68,33 @@ namespace BookstoreManagementApp_DAL
 
             return 2; // return 1 trong TH là quản lý
         }
-        //Account temp_account = new Account();
-        //string password = "";
-        
-        //private string username = "";
-        //private string savedPassword = "$2a$10$mdvPjWsllunjF2x7sqpU2umPCud5NF9IRsjXvPeA/MLL9dsNicRka";
-        //private string savedPassword2 = "$2a$10$3WGn/jRe86MqREEjUXfi2OHkp0oHFIIpHDmg7cLfHn4vIp4f93sJ6";
-
-        //private void btLogin_Click(object sender, EventArgs e)
-        //private void BCrypt_Verify()
+        ///*##################################################*/
+        //public int LoginAccount(string UserName, string Password)
         //{
-        //    bool checkPass = BCrypt.Net.BCrypt.Verify(tb2.Text.ToString(), savedPassword);
-        //    if (checkPass)
+        //    Get_Account_Info(); // Gọi hàm để add thông tin tk user vào list để xét đăng nhập
+        //    //Vòng lặp để xét xem mật khẩu và user name đã dc nhập đúng hay chưa(xét từ đầu tới cuối)
+        //    for (int i = 0; i < List_accounts.Count; i++)
         //    {
-        //        MessageBox.Show("Password Correct!");
+        //        // Nếu nhập đúng thì ẩn form nhập password và hiển thị form tiếp theo
+        //        if (List_accounts[i].UserName == UserName && checkPass(List_accounts[i].Password, Password))
+        //        {
+        //            //CheckUser = true;
+
+        //            // Xét xem phân quyền là admin hay nhân viên để trả về giá trị tương ứng và gọi form tương ứng
+        //            if (List_accounts[i].AccessLevel == 0)
+        //                return 0; // return 0 trong TH là nhân viên
+        //            else
+        //                return 1;
+        //        }
         //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Password Incorrect");
-        //    }
+
+        //    return 2; // return 1 trong TH là quản lý
+        //}
+        //private bool checkPass(Entered_password, Saved_password)
+        //{
+        //    return BCrypt.Net.BCrypt.Verify(tb2.Text.ToString(), savedPassword); //Mã hoá chuỗi password người dùng nhập vào, sau đó
+        //                                                                         //so sánh với password đã được mã hoá trong DB           
         //}
     }
+}
 }
