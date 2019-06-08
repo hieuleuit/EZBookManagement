@@ -73,9 +73,49 @@ namespace BookstoreManagementApp_Final_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Asset_1 {
+            get {
+                object obj = ResourceManager.GetObject("Asset 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Back {
             get {
                 object obj = ResourceManager.GetObject("Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Biggest {
+            get {
+                object obj = ResourceManager.GetObject("Biggest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Biggest_1 {
+            get {
+                object obj = ResourceManager.GetObject("Biggest-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Biggest_laststt {
+            get {
+                object obj = ResourceManager.GetObject("Biggest-laststt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +136,26 @@ namespace BookstoreManagementApp_Final_.Properties {
         internal static System.Drawing.Bitmap Chart {
             get {
                 object obj = ResourceManager.GetObject("Chart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chart1 {
+            get {
+                object obj = ResourceManager.GetObject("Chart1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CSVC {
+            get {
+                object obj = ResourceManager.GetObject("CSVC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +223,16 @@ namespace BookstoreManagementApp_Final_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Main_background {
+            get {
+                object obj = ResourceManager.GetObject("Main_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Manage_i {
             get {
                 object obj = ResourceManager.GetObject("Manage-i", resourceCulture);
@@ -183,6 +253,86 @@ namespace BookstoreManagementApp_Final_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nv {
+            get {
+                object obj = ResourceManager.GetObject("nv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nv_ql {
+            get {
+                object obj = ResourceManager.GetObject("nv-ql", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nv_tk {
+            get {
+                object obj = ResourceManager.GetObject("nv-tk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nv_tk1 {
+            get {
+                object obj = ResourceManager.GetObject("nv-tk1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pn_nv {
+            get {
+                object obj = ResourceManager.GetObject("pn_nv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pn_nvlast1 {
+            get {
+                object obj = ResourceManager.GetObject("pn_nvlast1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pn_nvlasttt {
+            get {
+                object obj = ResourceManager.GetObject("pn_nvlasttt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pn_nvreallast {
+            get {
+                object obj = ResourceManager.GetObject("pn_nvreallast", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap repo {
             get {
                 object obj = ResourceManager.GetObject("repo", resourceCulture);
@@ -196,6 +346,16 @@ namespace BookstoreManagementApp_Final_.Properties {
         internal static System.Drawing.Bitmap shopping_i {
             get {
                 object obj = ResourceManager.GetObject("shopping-i", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Slr {
+            get {
+                object obj = ResourceManager.GetObject("Slr", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

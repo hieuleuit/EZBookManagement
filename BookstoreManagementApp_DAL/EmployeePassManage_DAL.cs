@@ -9,35 +9,35 @@ using System.Windows.Forms;
 
 namespace BookstoreManagementApp_DAL
 {
-    public class EmployeePassManage_DAL // Class để thực hiện những thao tác với tk của nhân viên
+    public class Account_manage_DAL // Class để thực hiện những thao tác với tk của nhân viên
     {
         // List để lưu dữ liệu mật khẩu truy xuất từ database (xét xem nhân viên có nhập đúng mk đăng nhập hay không)
-        List<EmployeePassword> employeesPassword = new List<EmployeePassword>();
+        List<Account> List_accounts = new List<Account>();
 
         // Hàm để lưu thông tin password của nhân viên lấy từ database
-        public void AddEmployeePassToList()
+        public void Get_Account_Info() //Lấy thông tin tài khoản nhân viên từ database, thêm nó vào list "Account"
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString)) // khởi tạo kết nối đến database
             {
-                connection.Open(); // mở kết nối đến database
+                connection.Open(); // Mở kết nối đến database
 
-                string passwordSelect = "Select * from MATKHAUNV";
+                string Select_all = "SELECT * from PASSWORD";
 
-                SqlCommand passwordList = new SqlCommand(passwordSelect, connection); // Truy xuất dữ liệu từ database
-                SqlDataReader passwordReader = passwordList.ExecuteReader(); // biến để đọc dữ liệu truy xuất và lưu vào list
+                SqlCommand sqlcmd = new SqlCommand(Select_all, connection); // Truy xuất dữ liệu từ database
+                SqlDataReader Data_reader = sqlcmd.ExecuteReader(); // biến để đọc dữ liệu truy xuất và lưu vào list
 
-                while (passwordReader.Read())
+                while (Data_reader.Read())
                 {
-                    EmployeePassword employee = new EmployeePassword(); // biến để lưu trữ các thông tin được đọc ra và đưa vào list
+                    Account Staff = new Account(); // biến để lưu trữ các thông tin được đọc ra và đưa vào list
 
-                    employee.EmployeeUserName = (string)passwordReader["USERNAME"]; // đọc dữ liệu đã truy xuất
-                    employee.EmployeePass = (string)passwordReader["PASS"];
-                    employee.AccessLevel = (int)passwordReader["ACCESSLEVEL"];
+                    Staff.UserName = (string)Data_reader["USERNAME"]; // đọc dữ liệu đã truy xuất
+                    Staff.Password = (string)Data_reader["PASS"];
+                    Staff.AccessLevel = (int)Data_reader["ACCESSLEVEL"];
 
-                    employeesPassword.Add(employee); // Lưu dữ liệu đã đọc vào list
+                    List_accounts.Add(Staff); // Lưu dữ liệu đã đọc vào list "Account"
                 }
 
-                connection.Close(); // ngắt kết nối đến database
+                connection.Close(); // Đóng kết nối đến database
             }
         }
 
@@ -45,18 +45,18 @@ namespace BookstoreManagementApp_DAL
         // Hàm để log in vào mật khẩu của nhân viên
         public int LoginAccount(string UserName, string Password)
         {
-            AddEmployeePassToList(); // Gọi hàm để add thông tin tk user vào list để xét đăng nhập
+            Get_Account_Info(); // Gọi hàm để add thông tin tk user vào list để xét đăng nhập
 
             //Vòng lặp để xét xem mật khẩu và user name đã dc nhập đúng hay chưa(xét từ đầu tới cuối)
-            for (int i = 0; i < employeesPassword.Count; i++)
+            for (int i = 0; i < List_accounts.Count; i++)
             {
                 // Nếu nhập đúng thì ẩn form nhập password và hiển thị form tiếp theo
-                if (employeesPassword[i].EmployeeUserName == UserName && employeesPassword[i].EmployeePass == Password)
+                if (List_accounts[i].UserName == UserName && List_accounts[i].Password == Password)
                 {
                     //CheckUser = true;
 
                     // Xét xem phân quyền là admin hay nhân viên để trả về giá trị tương ứng và gọi form tương ứng
-                    if (employeesPassword[i].AccessLevel == 0)
+                    if (List_accounts[i].AccessLevel == 0)
                     {
                         return 0; // return 0 trong TH là nhân viên
                     }
@@ -68,5 +68,33 @@ namespace BookstoreManagementApp_DAL
 
             return 2; // return 1 trong TH là quản lý
         }
+        ///*##################################################*/
+        //public int LoginAccount(string UserName, string Password)
+        //{
+        //    Get_Account_Info(); // Gọi hàm để add thông tin tk user vào list để xét đăng nhập
+        //    //Vòng lặp để xét xem mật khẩu và user name đã dc nhập đúng hay chưa(xét từ đầu tới cuối)
+        //    for (int i = 0; i < List_accounts.Count; i++)
+        //    {
+        //        // Nếu nhập đúng thì ẩn form nhập password và hiển thị form tiếp theo
+        //        if (List_accounts[i].UserName == UserName && checkPass(List_accounts[i].Password, Password))
+        //        {
+        //            //CheckUser = true;
+
+        //            // Xét xem phân quyền là admin hay nhân viên để trả về giá trị tương ứng và gọi form tương ứng
+        //            if (List_accounts[i].AccessLevel == 0)
+        //                return 0; // return 0 trong TH là nhân viên
+        //            else
+        //                return 1;
+        //        }
+        //    }
+
+        //    return 2; // return 1 trong TH là quản lý
+        //}
+        //private bool checkPass(Entered_password, Saved_password)
+        //{
+        //    return BCrypt.Net.BCrypt.Verify(tb2.Text.ToString(), savedPassword); //Mã hoá chuỗi password người dùng nhập vào, sau đó
+        //                                                                         //so sánh với password đã được mã hoá trong DB           
+        //}
     }
+}
 }
