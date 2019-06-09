@@ -39,10 +39,19 @@
             this.bt_ql = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FULLNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LOCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PHONE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SEX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SALARYLEVEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -176,6 +185,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(215, 119);
             this.panel1.Name = "panel1";
@@ -193,6 +203,64 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ NHÂN VIÊN";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.FULLNAME,
+            this.DOB,
+            this.LOCA,
+            this.PHONE,
+            this.SEX,
+            this.SALARYLEVEL});
+            this.dataGridView1.Location = new System.Drawing.Point(3, 96);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(959, 473);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // FULLNAME
+            // 
+            this.FULLNAME.DataPropertyName = "FULLNAME";
+            this.FULLNAME.HeaderText = "Họ tên";
+            this.FULLNAME.Name = "FULLNAME";
+            // 
+            // DOB
+            // 
+            this.DOB.DataPropertyName = "DOB";
+            this.DOB.HeaderText = "Ngày sinh";
+            this.DOB.Name = "DOB";
+            // 
+            // LOCA
+            // 
+            this.LOCA.DataPropertyName = "LOCA";
+            this.LOCA.HeaderText = "Địa chỉ";
+            this.LOCA.Name = "LOCA";
+            // 
+            // PHONE
+            // 
+            this.PHONE.DataPropertyName = "PHONE";
+            this.PHONE.HeaderText = "SĐT";
+            this.PHONE.Name = "PHONE";
+            // 
+            // SEX
+            // 
+            this.SEX.DataPropertyName = "SEX";
+            this.SEX.HeaderText = "Giới tính";
+            this.SEX.Name = "SEX";
+            // 
+            // SALARYLEVEL
+            // 
+            this.SALARYLEVEL.DataPropertyName = "SALARYLEVEL";
+            this.SALARYLEVEL.HeaderText = "Bậc lương";
+            this.SALARYLEVEL.Name = "SALARYLEVEL";
+            // 
             // TestF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,6 +276,7 @@
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,5 +294,13 @@
         private System.Windows.Forms.Button bt_ql;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FULLNAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DOB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LOCA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PHONE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SEX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SALARYLEVEL;
     }
 }

@@ -40,6 +40,8 @@
             this.bt_savenv = new System.Windows.Forms.Button();
             this.dgv_st = new System.Windows.Forms.DataGridView();
             this.pn_nv = new System.Windows.Forms.Panel();
+            this.pn_add_save = new System.Windows.Forms.Panel();
+            this.pn_edit_save = new System.Windows.Forms.Panel();
             this.bt_esave = new System.Windows.Forms.Button();
             this.rb_female = new System.Windows.Forms.RadioButton();
             this.rb_male = new System.Windows.Forms.RadioButton();
@@ -54,12 +56,10 @@
             this.tb_phone = new System.Windows.Forms.TextBox();
             this.tb_id = new System.Windows.Forms.TextBox();
             this.tb_name = new System.Windows.Forms.TextBox();
-            this.pn_edit_save = new System.Windows.Forms.Panel();
-            this.pn_add_save = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_st)).BeginInit();
             this.pn_nv.SuspendLayout();
-            this.pn_edit_save.SuspendLayout();
             this.pn_add_save.SuspendLayout();
+            this.pn_edit_save.SuspendLayout();
             this.SuspendLayout();
             // 
             // bt_chart
@@ -223,6 +223,24 @@
             this.pn_nv.Name = "pn_nv";
             this.pn_nv.Size = new System.Drawing.Size(850, 577);
             this.pn_nv.TabIndex = 12;
+            // 
+            // pn_add_save
+            // 
+            this.pn_add_save.Controls.Add(this.bt_addnv);
+            this.pn_add_save.Controls.Add(this.bt_savenv);
+            this.pn_add_save.Location = new System.Drawing.Point(473, 217);
+            this.pn_add_save.Name = "pn_add_save";
+            this.pn_add_save.Size = new System.Drawing.Size(63, 83);
+            this.pn_add_save.TabIndex = 30;
+            // 
+            // pn_edit_save
+            // 
+            this.pn_edit_save.Controls.Add(this.bt_editnv);
+            this.pn_edit_save.Controls.Add(this.bt_esave);
+            this.pn_edit_save.Location = new System.Drawing.Point(630, 217);
+            this.pn_edit_save.Name = "pn_edit_save";
+            this.pn_edit_save.Size = new System.Drawing.Size(65, 85);
+            this.pn_edit_save.TabIndex = 29;
             // 
             // bt_esave
             // 
@@ -390,24 +408,6 @@
             this.tb_name.Size = new System.Drawing.Size(206, 21);
             this.tb_name.TabIndex = 12;
             // 
-            // pn_edit_save
-            // 
-            this.pn_edit_save.Controls.Add(this.bt_editnv);
-            this.pn_edit_save.Controls.Add(this.bt_esave);
-            this.pn_edit_save.Location = new System.Drawing.Point(630, 217);
-            this.pn_edit_save.Name = "pn_edit_save";
-            this.pn_edit_save.Size = new System.Drawing.Size(65, 85);
-            this.pn_edit_save.TabIndex = 29;
-            // 
-            // pn_add_save
-            // 
-            this.pn_add_save.Controls.Add(this.bt_addnv);
-            this.pn_add_save.Controls.Add(this.bt_savenv);
-            this.pn_add_save.Location = new System.Drawing.Point(473, 217);
-            this.pn_add_save.Name = "pn_add_save";
-            this.pn_add_save.Size = new System.Drawing.Size(63, 83);
-            this.pn_add_save.TabIndex = 30;
-            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,14 +423,14 @@
             this.Controls.Add(this.bt_chart);
             this.Name = "ManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ManagerForm";
+            this.Text = "Quản lý";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManagerForm_FormClosing);
             this.Load += new System.EventHandler(this.ManagerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_st)).EndInit();
             this.pn_nv.ResumeLayout(false);
             this.pn_nv.PerformLayout();
-            this.pn_edit_save.ResumeLayout(false);
             this.pn_add_save.ResumeLayout(false);
+            this.pn_edit_save.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

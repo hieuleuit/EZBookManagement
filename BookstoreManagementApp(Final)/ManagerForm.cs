@@ -3,12 +3,14 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
+using BookstoreManagementApp_BUS;
 using BookstoreManagementApp_DAL;
 
 namespace BookstoreManagementApp_Final_
 {
     public partial class ManagerForm : Form
     {
+        Staff_account_BUS account = new Staff_account_BUS();
         int flag; //Cờ dùng để kiểm soát cho phép sửa giá trị trong textbox
         private void Customize_Button()
         {
@@ -26,7 +28,7 @@ namespace BookstoreManagementApp_Final_
         }
         private void ManagerForm_Load(object sender, EventArgs e)
         {
-            int flag = 0; 
+            int flag = 0;
             Disable_Edit_Textbox();
             dgv_st.SelectionMode = DataGridViewSelectionMode.FullRowSelect; //Khi click chọn 1 cell thì cả Row sẽ được chọn
 
@@ -36,7 +38,7 @@ namespace BookstoreManagementApp_Final_
 
             dgv_st.ReadOnly = true; //Không cho phép sửa chữa nội dung DataGridView
             Customize_Button();
-            
+
             //Ẩn các nút chức năng Thống kê, Lương, CSVC
             bt_ql.Visible = false;
             bt_tk.Visible = false;
@@ -171,11 +173,14 @@ namespace BookstoreManagementApp_Final_
 
         private void loaddata() //Hàm để xuất data từ bảng DSSV
         {
-            DataTable dt = ReadData("SELECT * FROM STAFF");
-            if (dt != null)
-            {
-                dgv_st.DataSource = dt;
-            }
+            //Đoạn này m viết
+            //DataTable dt = ReadData("SELECT * FROM STAFF");
+            //if (dt != null)
+            //{
+            //    dgv_st.DataSource = dt;
+            //}
+            //Dòng dưới t test
+            dgv_st.DataSource = account.Get();
         }
 
         private void bt_addnv_Click(object sender, EventArgs e)
@@ -195,9 +200,9 @@ namespace BookstoreManagementApp_Final_
             dtp.Text = "";
             rb_male.Checked = true;
             tb_name.Focus();
-            
+
         }
-        
+
         private void bt_savenv_Click(object sender, EventArgs e)
         {
             AddData(sender, e);
@@ -398,7 +403,7 @@ namespace BookstoreManagementApp_Final_
             if (index >= 0)
             {
 
-               ///////////////////////////////////////////////////
+                ///////////////////////////////////////////////////
                 ID = string.Copy(dgv_st.Rows[index].Cells["ID"].Value.ToString());
                 tb_id.Text = dgv_st.Rows[index].Cells["ID"].Value.ToString();
                 tb_name.Text = dgv_st.Rows[index].Cells["FULLNAME"].Value.ToString();
@@ -439,7 +444,7 @@ namespace BookstoreManagementApp_Final_
                 }
             }
         }
-        
+
         private void Disable_Edit_Textbox()
         {
             if (flag == 0) //Không cho phép sửa các giá trị trên textbox

@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ConnectionString.cs" />
     <Compile Include="EmployeePassManage_DAL.cs" />
+    <Compile Include="Get_Staff_Information_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

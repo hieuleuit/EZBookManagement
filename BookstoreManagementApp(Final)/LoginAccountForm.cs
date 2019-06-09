@@ -1,12 +1,6 @@
 ﻿using BookstoreManagementApp_BUS;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BookstoreManagementApp_Final_
@@ -32,7 +26,7 @@ namespace BookstoreManagementApp_Final_
         // Khai báo form để xét xem ng đăng nhập là nv hay quản lý để gọi form tương ứng
         EmployeeForm employeeForm = new EmployeeForm();
         ManagerForm managerForm = new ManagerForm();
-
+        TestF another_form = new TestF();
         EmployeePassManage_BUS Employee = new EmployeePassManage_BUS(); // Biến để gọi các thao tác với sự kiện
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -51,6 +45,7 @@ namespace BookstoreManagementApp_Final_
                 this.Hide();
 
                 managerForm.Show();
+                //another_form.Show();
             }
 
             // Nếu tk đăng nhập là ko hợp lệ
@@ -87,6 +82,7 @@ namespace BookstoreManagementApp_Final_
                     this.Hide();
 
                     managerForm.Show();
+                    //another_form.Show();
                 }
 
                 // Nếu tk đăng nhập là ko hợp lệ
@@ -124,8 +120,7 @@ namespace BookstoreManagementApp_Final_
                     this.Hide();
 
                     managerForm.Show();
-                    /*TestF another_form = new TestF();
-                    another_form.Show();*/
+                    //another_form.Show();
                 }
 
                 // Nếu tk đăng nhập là ko hợp lệ
