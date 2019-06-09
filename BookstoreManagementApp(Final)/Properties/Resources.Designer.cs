@@ -123,6 +123,16 @@ namespace BookstoreManagementApp_Final_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Biggest_laststt1 {
+            get {
+                object obj = ResourceManager.GetObject("Biggest-laststt1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BILL {
             get {
                 object obj = ResourceManager.GetObject("BILL", resourceCulture);
@@ -146,6 +156,16 @@ namespace BookstoreManagementApp_Final_.Properties {
         internal static System.Drawing.Bitmap Chart1 {
             get {
                 object obj = ResourceManager.GetObject("Chart1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chart11 {
+            get {
+                object obj = ResourceManager.GetObject("Chart11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

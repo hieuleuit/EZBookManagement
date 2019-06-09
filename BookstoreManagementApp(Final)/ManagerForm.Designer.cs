@@ -200,6 +200,7 @@
             // 
             // pn_nv
             // 
+            this.pn_nv.BackgroundImage = global::BookstoreManagementApp_Final_.Properties.Resources.pn_nvreallast;
             this.pn_nv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pn_nv.Controls.Add(this.pn_add_save);
             this.pn_nv.Controls.Add(this.pn_edit_save);
@@ -412,6 +413,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::BookstoreManagementApp_Final_.Properties.Resources.Biggest_laststt;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1036, 693);
             this.Controls.Add(this.pn_nv);

@@ -180,7 +180,7 @@ namespace BookstoreManagementApp_Final_
             //    dgv_st.DataSource = dt;
             //}
             //Dòng dưới t test
-            dgv_st.DataSource = account.Get();
+            dgv_st.DataSource = account.Get().Tables[0];
         }
 
         private void bt_addnv_Click(object sender, EventArgs e)

@@ -54,7 +54,7 @@ namespace BookstoreManagementApp_DAL
         public void Update_Staff_Info(string ID, string FULLNAME, string DOB, string LOCA, int SEX, string PHONE, float SALARYLEVEL)
         {
             string Insert_into = "INSERT INTO STAFF VALUES (@ID, @FULLNAME, @DOB, @LOCA, @SEX, @PHONE, @SALARYLEVEL)";
-            SqlDataAdapter dataAdapter;
+            //SqlDataAdapter dataAdapter;
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
             {
                 try

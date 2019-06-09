@@ -38,7 +38,6 @@
             this.bt_tk = new System.Windows.Forms.Button();
             this.bt_ql = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FULLNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +46,7 @@
             this.PHONE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SEX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SALARYLEVEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -192,17 +192,6 @@
             this.panel1.Size = new System.Drawing.Size(965, 573);
             this.panel1.TabIndex = 4;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(213, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(516, 56);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "QUẢN LÝ NHÂN VIÊN";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -261,6 +250,17 @@
             this.SALARYLEVEL.HeaderText = "Bậc lương";
             this.SALARYLEVEL.Name = "SALARYLEVEL";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(213, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(516, 56);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "QUẢN LÝ NHÂN VIÊN";
+            // 
             // TestF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +271,7 @@
             this.MinimumSize = new System.Drawing.Size(1200, 732);
             this.Name = "TestF";
             this.Text = "Manager ";
+            this.Load += new System.EventHandler(this.TestF_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

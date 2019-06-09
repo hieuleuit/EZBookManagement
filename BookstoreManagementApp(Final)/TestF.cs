@@ -29,6 +29,10 @@ namespace BookstoreManagementApp_Final_
             return data;
         }
 
+        private void TestF_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Get_Info().Tables[0];
+        }
     }
     }
-}
+
