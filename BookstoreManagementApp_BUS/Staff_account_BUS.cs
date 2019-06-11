@@ -21,13 +21,13 @@ namespace BookstoreManagementApp_BUS
         {
             temp.Update_Staff_Info(ID, FULLNAME, DOB, LOCA, SEX, PHONE, SALARYLEVEL);
         }
-        public void Delete()
+        public void Delete(string ID)
         {
-            temp.Delete_Staff_Info();
+            temp.Delete_Staff_Info(ID);
         }
-        public void Add()
+        public void Add(string ID, string FULLNAME, string DOB, string LOCA, int SEX, string PHONE, float SALARYLEVEL)
         {
-            temp.Add_New_Staff_Info();
+            temp.Add_New_Staff_Info(ID, FULLNAME, DOB, LOCA, SEX, PHONE, SALARYLEVEL);
         }
     }
 }
