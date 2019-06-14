@@ -56,6 +56,7 @@
             this.tb_phone = new System.Windows.Forms.TextBox();
             this.tb_id = new System.Windows.Forms.TextBox();
             this.tb_name = new System.Windows.Forms.TextBox();
+            this.bt_export_to_excel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_st)).BeginInit();
             this.pn_nv.SuspendLayout();
             this.pn_add_save.SuspendLayout();
@@ -409,6 +410,16 @@
             this.tb_name.Size = new System.Drawing.Size(206, 21);
             this.tb_name.TabIndex = 12;
             // 
+            // bt_export_to_excel
+            // 
+            this.bt_export_to_excel.Location = new System.Drawing.Point(386, 46);
+            this.bt_export_to_excel.Name = "bt_export_to_excel";
+            this.bt_export_to_excel.Size = new System.Drawing.Size(262, 23);
+            this.bt_export_to_excel.TabIndex = 13;
+            this.bt_export_to_excel.Text = "EXPORT TO EXCEL";
+            this.bt_export_to_excel.UseVisualStyleBackColor = true;
+            this.bt_export_to_excel.Click += new System.EventHandler(this.bt_export_to_excel_Click);
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,6 +427,7 @@
             this.BackgroundImage = global::BookstoreManagementApp_Final_.Properties.Resources.Biggest_laststt;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1036, 693);
+            this.Controls.Add(this.bt_export_to_excel);
             this.Controls.Add(this.pn_nv);
             this.Controls.Add(this.bt_tk);
             this.Controls.Add(this.bt_ql);
@@ -467,5 +479,6 @@
         private System.Windows.Forms.Button bt_esave;
         private System.Windows.Forms.Panel pn_add_save;
         private System.Windows.Forms.Panel pn_edit_save;
+        private System.Windows.Forms.Button bt_export_to_excel;
     }
 }

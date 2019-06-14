@@ -132,3 +132,4 @@ C:\Users\Hieu\Desktop\EZBookManagement\BookstoreManagementApp(Final)\bin\Debug\B
 C:\Users\Hieu\Desktop\EZBookManagement\BookstoreManagementApp(Final)\obj\Debug\BookstoreManagementApp_GUI.csproj.CopyComplete
 C:\Users\Hieu\Desktop\EZBookManagement\BookstoreManagementApp(Final)\obj\Debug\BookstoreManagementApp(Final).exe
 C:\Users\Hieu\Desktop\EZBookManagement\BookstoreManagementApp(Final)\obj\Debug\BookstoreManagementApp(Final).pdb
+C:\Users\Hieu\Desktop\EZBookManagement\BookstoreManagementApp(Final)\obj\Debug\BookstoreManagementApp_GUI.csproj.ResolveComReference.cache
