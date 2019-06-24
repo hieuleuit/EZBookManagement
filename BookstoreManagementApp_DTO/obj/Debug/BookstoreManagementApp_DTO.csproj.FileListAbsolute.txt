@@ -6,4 +6,3 @@ C:\Users\Hieu\Desktop\EZBookManagement\BookstoreManagementApp_DTO\obj\Debug\Book
 C:\Users\Hieu\Desktop\EZBookManagement\BookstoreManagementApp_DTO\obj\Debug\BookstoreManagementApp_DTO.csproj.CopyComplete
 C:\Users\Hieu\Desktop\EZBookManagement\BookstoreManagementApp_DTO\obj\Debug\BookstoreManagementApp_DTO.dll
 C:\Users\Hieu\Desktop\EZBookManagement\BookstoreManagementApp_DTO\obj\Debug\BookstoreManagementApp_DTO.pdb
-C:\Users\Hieu\Desktop\EZBookManagement\BookstoreManagementApp_DTO\obj\Debug\BookstoreManagementApp_DTO.csprojAssemblyReference.cache

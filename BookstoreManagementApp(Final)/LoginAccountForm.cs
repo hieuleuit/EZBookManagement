@@ -26,7 +26,6 @@ namespace BookstoreManagementApp_Final_
         // Khai báo form để xét xem ng đăng nhập là nv hay quản lý để gọi form tương ứng
         EmployeeForm employeeForm = new EmployeeForm();
         ManagerForm managerForm = new ManagerForm();
-        TestF another_form = new TestF();
         EmployeePassManage_BUS Employee = new EmployeePassManage_BUS(); // Biến để gọi các thao tác với sự kiện
 
         private void LoginButton_Click(object sender, EventArgs e)
