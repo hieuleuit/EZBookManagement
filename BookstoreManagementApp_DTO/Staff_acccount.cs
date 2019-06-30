@@ -50,6 +50,7 @@ namespace BookstoreManagementApp_DTO
             set { phone_number = value; }
         }
 
+
         private int pay_rate;
         public int PAYRATE
         {
@@ -69,6 +70,7 @@ namespace BookstoreManagementApp_DTO
         {
             get { return allowence; }
             set { allowence = value; }
+
         }
     }
 }

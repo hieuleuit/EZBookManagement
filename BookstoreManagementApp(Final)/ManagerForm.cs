@@ -3,12 +3,16 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
+using BookstoreManagementApp_BUS;
 using BookstoreManagementApp_DAL;
+using Excel = Microsoft.Office.Interop.Excel;
+using app = Microsoft.Office.Interop.Excel.Application;
 
 namespace BookstoreManagementApp_Final_
 {
     public partial class ManagerForm : Form
     {
+
         public ManagerForm()
         {
             InitializeComponent();
@@ -19,6 +23,10 @@ namespace BookstoreManagementApp_Final_
                 ControlStyles.DoubleBuffer, true); // Set để khi vẽ rắn lên hình thì sẽ không bị nháy
         }
         //Đặt màu nền cho button
+
+        Staff_account_BUS account = new Staff_account_BUS();
+        int flag; //Cờ dùng để kiểm soát cho phép sửa giá trị trong textbox
+
         private void Customize_Button()
         {
             bt_chart.BackColor = Color.FromArgb(0, 65, 120);
@@ -35,10 +43,16 @@ namespace BookstoreManagementApp_Final_
         }
         private void ManagerForm_Load(object sender, EventArgs e)
         {
+
             Customize_Button();
             lb_slr_us.Text = data.user;
             lb_slr_id.Text = ReadDataa("SELECT ID FROM PASSWORD WHERE PASSWORD.USERNAME = '" + data.user + "'").ToString();
         }
+
+            int flag = 0;
+            Disable_Edit_Textbox();
+            dgv_st.SelectionMode = DataGridViewSelectionMode.FullRowSelect; //Khi click chọn 1 cell thì cả Row sẽ được chọn
+
 
         public static DataTable ReadData_slr(string cmd)
         {
@@ -63,10 +77,19 @@ namespace BookstoreManagementApp_Final_
             OpenConnect();
             DataTable da = new DataTable();
 
+
             SqlCommand sc = new SqlCommand(cmd, NV_connectionString);
             SqlDataAdapter sda = new SqlDataAdapter(sc);
             sda.Fill(da);
             object id = sc.ExecuteScalar();
+
+            dgv_st.ReadOnly = true; //Không cho phép sửa chữa nội dung DataGridView
+            Customize_Button();
+
+            //Ẩn các nút chức năng Thống kê, Lương, CSVC
+            bt_ql.Visible = false;
+            bt_tk.Visible = false;
+
 
             CloseConnect();
             return id;
@@ -219,6 +242,7 @@ namespace BookstoreManagementApp_Final_
 
         /*private void bt_luong_Click(object sender, EventArgs e)
         {
+
             pn_main.Visible = false;
             pn_slr.Visible = true;
             bt_ql.Visible = false;
@@ -233,6 +257,16 @@ namespace BookstoreManagementApp_Final_
             }
             //cbb_slr_m.DisplayMember = cbb_slr_m.Items[0].ToString();
             //cbb_slr_y.Text = ReadDataa("SELECT MIN(VALUEE) FROM(SELECT YEAR(LOGINTIME) AS VALUEE FROM STAFFLOG) AVC").ToString();
+
+            //Đoạn này m viết
+            //DataTable dt = ReadData("SELECT * FROM STAFF");
+            //if (dt != null)
+            //{
+            //    dgv_st.DataSource = dt;
+            //}
+            //Dòng dưới t test
+            dgv_st.DataSource = account.Get().Tables[0];
+
         }
         */
         //private void dgw_slr_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -249,10 +283,32 @@ namespace BookstoreManagementApp_Final_
 
         private void bt_slr_xem_Click(object sender, EventArgs e)
         {
+
             //loaddata_slr_temp();
             //Calslr();
         }
         public DataSet GetStaff_SLR()
+
+            flag = 1; //Cho phép sửa dữ liệu trong textbox
+            Disable_Edit_Textbox();
+            pn_edit_save.Visible = false; //Khi chọn Thêm thì ẩn tính năng Sửa và Xoá đi
+            bt_delnv.Visible = false;
+            bt_addnv.Enabled = false;
+            bt_savenv.Visible = true;
+            //Xoá nội dung đang hiển thị trên các textbox để người dùng nhập dữ liệu mới
+            tb_name.Text = "";
+            tb_id.Text = "";
+            tb_phone.Text = "";
+            tb_role.Text = "";
+            tb_bl.Text = "";
+            dtp.Text = "";
+            rb_male.Checked = true;
+            tb_name.Focus();
+
+        }
+
+        private void bt_savenv_Click(object sender, EventArgs e)
+
         {
             DataSet data = new DataSet();
             string query = "SELECT FULLNAME, ID FROM STAFF ORDER BY ID";
@@ -375,12 +431,31 @@ namespace BookstoreManagementApp_Final_
         private void bt_luong_Click(object sender, EventArgs e)
         {
 
+
             userControl_Staff.Hide();
             userControl_Salary.Show();
             userControl_CSVC.Hide();
             //userControl_Chart.Hide();
             pn_main.Controls.Clear();
             pn_main.Controls.Add(userControl_Salary);
+
+                ///////////////////////////////////////////////////
+                ID = string.Copy(dgv_st.Rows[index].Cells["ID"].Value.ToString());
+                tb_id.Text = dgv_st.Rows[index].Cells["ID"].Value.ToString();
+                tb_name.Text = dgv_st.Rows[index].Cells["FULLNAME"].Value.ToString();
+                dtp.Text = dgv_st.Rows[index].Cells["DOB"].Value.ToString();
+                tb_phone.Text = dgv_st.Rows[index].Cells["PHONE"].Value.ToString();
+                tb_bl.Text = dgv_st.Rows[index].Cells["SALARYLEVEL"].Value.ToString();
+                if (rb_male.Text == dgv_st.Rows[index].Cells["SEX"].Value.ToString())
+                {
+                    rb_male.Checked = true;
+                }
+                else if (rb_female.Text == dgv_st.Rows[index].Cells["SEX"].Value.ToString())
+                {
+                    rb_female.Checked = true;
+                }
+            }
+
         }
         private void bt_csvc_Click(object sender, EventArgs e)
         {
@@ -391,7 +466,14 @@ namespace BookstoreManagementApp_Final_
             pn_main.Controls.Clear();
             pn_main.Controls.Add(userControl_CSVC);
         }
+
         private void bt_chart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Disable_Edit_Textbox()
+
         {
             userControl_Staff.Hide();
             userControl_Salary.Hide();
@@ -400,6 +482,8 @@ namespace BookstoreManagementApp_Final_
             pn_main.Controls.Clear();
             //pn_main.Controls.Add(userControl_Chart);
         }
+
+        
     }
     
 }

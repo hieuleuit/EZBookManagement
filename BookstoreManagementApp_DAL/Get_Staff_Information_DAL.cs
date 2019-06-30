@@ -12,10 +12,8 @@ namespace BookstoreManagementApp_DAL
 {
     public class Staff_info
     {
-        //List<Staff_acccount> List_staffs = new List<Staff_acccount>();
-        
-        //Hàm lấy thông tin toàn bộ các nhân viên từ cơ sở dữ liệu
-        public DataSet Get_Staff_Info()
+
+        public DataSet GetStaff()
         {
             DataSet data = new DataSet();
             string Select_all = "SELECT * from STAFF";
@@ -28,10 +26,16 @@ namespace BookstoreManagementApp_DAL
             }
             return data;
         }
+
         //Hàm thêm thông tin 1 nhân viên mới vào cơ sở dữ liệu
         public void Add_New_Staff_Info(string ID, string FULLNAME, string DOB, string LOCA, int SEX, string PHONE, float PAYRATE, int BASICRATE, int ALLOWENCE)
         {
             string Insert_into = "INSERT INTO STAFF VALUES (@ID, @FULLNAME, @DOB, @LOCA, @SEX, @PHONE, @PAYRATE, @BASICRATE, @ALLOWENCE)";
+
+        public void Add_New_Staff_Info(string ID, string FULLNAME, string DOB, string LOCA, int SEX, string PHONE, float SALARYLEVEL)
+        {
+            string Insert_into = "INSERT INTO STAFF VALUES (@ID, @FULLNAME, @DOB, @LOCA, @SEX, @PHONE, @SALARYLEVEL)";
+
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
             {
                 try
@@ -42,6 +46,7 @@ namespace BookstoreManagementApp_DAL
                     SqlCommand cmdInsert = new SqlCommand(Insert_into, connection);
                     cmdInsert.Parameters.Add("@ID", SqlDbType.VarChar).Value = ID;
                     cmdInsert.Parameters.Add("@FULLNAME", SqlDbType.NVarChar).Value = FULLNAME;
+
                     cmdInsert.Parameters.Add("@DOB", SqlDbType.Date).Value = DOB;
                     cmdInsert.Parameters.Add("@LOCA", SqlDbType.NVarChar).Value = LOCA;
                     cmdInsert.Parameters.Add("@SEX", SqlDbType.Int).Value = SEX;
@@ -63,6 +68,44 @@ namespace BookstoreManagementApp_DAL
         public void Update_Staff_Info(string ID, string FULLNAME, string DOB, string LOCA, int SEX, string PHONE, float PAYRATE, int BASICRATE, int ALLOWENCE)
         {
             string Update_set = "UPDATE STAFF SET FULLNAME=@FULLNAME, DOB=@DOB, LOCA=@LOCA, SEX=@SEX, PHONE=@PHONE, PAYRATE=@PAYRATE, BASICRATE=@BASICRATE, ALLOWENCE=@ALLOWENCE WHERE ID=@ID";
+
+                    cmdInsert.Parameters.Add("@DOB", SqlDbType.SmallDateTime).Value = DOB;
+                    cmdInsert.Parameters.Add("@LOCA", SqlDbType.NVarChar).Value = LOCA;
+                    cmdInsert.Parameters.Add("@SEX", SqlDbType.Int).Value = SEX;
+                    cmdInsert.Parameters.Add("@PHONE", SqlDbType.VarChar).Value = PHONE;
+                    cmdInsert.Parameters.Add("@SALARYLEVEL", SqlDbType.Float).Value = SALARYLEVEL;
+                    cmdInsert.ExecuteNonQuery();
+                    connection.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Đã có lỗi xảy ra, xin vui lòng thử lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        public void Delete_Staff_Info(string ID)
+        {
+            string Delete = "DELETE FROM STAFF WHERE ID=@ID";
+            using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmdInsert = new SqlCommand(Delete, connection);
+                    cmdInsert.Parameters.Add("@ID", SqlDbType.VarChar).Value = ID;
+                    cmdInsert.ExecuteNonQuery();
+                    connection.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Đã có lỗi xảy ra, xin vui lòng thử lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        public void Update_Staff_Info(string ID, string FULLNAME, string DOB, string LOCA, int SEX, string PHONE, float SALARYLEVEL)
+        {
+            string Insert_into = "UPDATE STAFF SET FULLNAME=@FULLNAME, DOB=@DOB, LOCA=@LOCA, SEX=@SEX, PHONE=@PHONE, SALARYLEVEL=@SALARYLEVEL WHERE ID=@ID";
+
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
             {
                 try
@@ -70,13 +113,18 @@ namespace BookstoreManagementApp_DAL
                     connection.Open();
                     SqlCommand cmdSetDateFormat = new SqlCommand("SET DATEFORMAT DMY", connection);
                     cmdSetDateFormat.ExecuteNonQuery();
+
                     SqlCommand cmdInsert = new SqlCommand(Update_set, connection);
+
+                    SqlCommand cmdInsert = new SqlCommand(Insert_into, connection);
+
                     cmdInsert.Parameters.Add("@ID", SqlDbType.VarChar).Value = ID;
                     cmdInsert.Parameters.Add("@FULLNAME", SqlDbType.NVarChar).Value = FULLNAME;
                     cmdInsert.Parameters.Add("@DOB", SqlDbType.SmallDateTime).Value = DOB;
                     cmdInsert.Parameters.Add("@LOCA", SqlDbType.NVarChar).Value = LOCA;
                     cmdInsert.Parameters.Add("@SEX", SqlDbType.Int).Value = SEX;
                     cmdInsert.Parameters.Add("@PHONE", SqlDbType.VarChar).Value = PHONE;
+
                     cmdInsert.Parameters.Add("@PAYRATE", SqlDbType.Float).Value = PAYRATE;
                     cmdInsert.Parameters.Add("@BASICRATE", SqlDbType.Int).Value = BASICRATE;
                     cmdInsert.Parameters.Add("@ALLOWENCE", SqlDbType.Int).Value = ALLOWENCE;
@@ -110,5 +158,17 @@ namespace BookstoreManagementApp_DAL
             }
         }
         
+
+                    cmdInsert.Parameters.Add("@SALARYLEVEL", SqlDbType.Float).Value = SALARYLEVEL;
+                    cmdInsert.ExecuteNonQuery();
+                    connection.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Đã có lỗi xảy ra, xin vui lòng thử lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
     }
 }

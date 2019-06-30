@@ -102,10 +102,8 @@ namespace BookstoreManagementApp_Final_
                 this.Hide();
 
                 managerForm.Show();
-                //another_form.Show();
-
-            }
-
+                //another_form.Show();           }
+			}
             // Nếu tk đăng nhập là ko hợp lệ
             else
             {
