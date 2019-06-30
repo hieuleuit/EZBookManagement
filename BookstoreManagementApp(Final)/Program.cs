@@ -18,6 +18,7 @@ namespace BookstoreManagementApp_Final_
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginAccountForm());
+            //Application.Run(new TestF());
         }
     }
 }
