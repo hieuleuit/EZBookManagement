@@ -16,7 +16,6 @@ namespace BookstoreManagementApp_DTO
         }
 
         private string username;
-
         public string UserName 
         {
             get { return username; }
@@ -24,7 +23,6 @@ namespace BookstoreManagementApp_DTO
         }
 
         private string password;
-
         public string Password
         {
             get { return password; }
@@ -32,7 +30,6 @@ namespace BookstoreManagementApp_DTO
         }
 
         private int access_level;
-
         public int AccessLevel
         {
             get { return access_level; }

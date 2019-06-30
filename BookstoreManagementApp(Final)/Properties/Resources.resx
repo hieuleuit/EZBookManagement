@@ -160,6 +160,9 @@
   <data name="Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ButtonAndFormImage\Back.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Main_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Main_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ButtonAndFormImage\Login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -180,6 +183,9 @@
   </data>
   <data name="repo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ButtonAndFormImage\repo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chart11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chart1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Manager-0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ButtonAndFormImage\Manager-0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,7 +217,7 @@
   <data name="STAFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ButtonAndFormImage\STAFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Main_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Main_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Biggest-laststt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Biggest-laststt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

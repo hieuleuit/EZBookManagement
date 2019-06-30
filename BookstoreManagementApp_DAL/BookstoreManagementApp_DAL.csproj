@@ -47,8 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectionString.cs" />
+    <Compile Include="CSVC_DAL.cs" />
     <Compile Include="EmployeePassManage_DAL.cs" />
+    <Compile Include="Get_Staff_Information_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staff_salary_DAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookstoreManagementApp_DTO\BookstoreManagementApp_DTO.csproj">

@@ -45,8 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CSVC_BUS.cs" />
     <Compile Include="EmployeePassManage_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staff_account_BUS.cs" />
+    <Compile Include="Staff_salary_BUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookstoreManagementApp_DAL\BookstoreManagementApp_DAL.csproj">

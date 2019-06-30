@@ -8,6 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
+using BookstoreManagementApp_BUS;
+using BookstoreManagementApp_DAL;
+
+using BookstoreManagementApp_DTO;
+
 namespace BookstoreManagementApp_Final_
 {
     public partial class EmployeeForm : Form
@@ -31,12 +37,24 @@ namespace BookstoreManagementApp_Final_
 
             loginForm.Show(); // Xuất form đăng nhập
         }
-
+        string logouttime;
         // Sự kiện khi ng dùng tắt form
         private void EmployeeForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to exit", "Notice", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                logouttime = DateTime.Now.ToString();
+                if (LoginAccountForm.who == 0)
+                {
+                    ManagerForm.EXECUTEDATAA("INSERT INTO STAFFLOG VALUES ('" + label2.Text + "','" + LoginAccountForm.logintime + "','" + logouttime + "','0','" + data.user + "','')");
+                    ManagerForm.EXECUTEDATAA("UPDATE STAFFLOG SET WTIME = DATEDIFF(SECOND,STAFFLOG.LOGINTIME,STAFFLOG.LOGOUTTIME) WHERE STAFFLOG.LOGINTIME = '" + LoginAccountForm.logintime + "'");
+
+                }
+                else if (LoginAccountForm.who == 1)
+                {
+                    ManagerForm.EXECUTEDATAA("INSERT INTO STAFFLOG VALUES ('" + label2.Text + "','" + LoginAccountForm.logintime + "','" + logouttime + "','1','" + data.user + "','')");
+                    ManagerForm.EXECUTEDATAA("UPDATE STAFFLOG SET WTIME = DATEDIFF(SECOND,STAFFLOG.LOGINTIME,STAFFLOG.LOGOUTTIME) WHERE STAFFLOG.LOGINTIME = '" + LoginAccountForm.logintime + "'");
+                }
                 LoginAccountForm loginForm = new LoginAccountForm(); // Khai báo form đăng nhập để xuất ra 
 
                 loginForm.Show();
@@ -95,5 +113,13 @@ namespace BookstoreManagementApp_Final_
                 }
             }
         }
+
+        private void EmployeeForm_Load(object sender, EventArgs e)
+        {
+            label1.Text = data.user;
+            label2.Text = ManagerForm.ReadDataa("SELECT ID FROM PASSWORD WHERE PASSWORD.USERNAME = '"+data.user+"'").ToString();
+            //textBox1.Text = ("SELECT STAFF.ID FROM STAFF, PASSWORD WHERE PASSWORD.USERNAME = '" + data.user + "'");
+        }
+        
     }
 }

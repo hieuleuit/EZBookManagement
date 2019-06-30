@@ -100,11 +100,23 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="TestF.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UC_CSVC.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TestF.Designer.cs">
-      <DependentUpon>TestF.cs</DependentUpon>
+    <Compile Include="UC_CSVC.Designer.cs">
+      <DependentUpon>UC_CSVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Salary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Salary.Designer.cs">
+      <DependentUpon>UC_Salary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Staff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Staff.Designer.cs">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -141,8 +153,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestF.resx">
-      <DependentUpon>TestF.cs</DependentUpon>
+    <EmbeddedResource Include="UC_CSVC.resx">
+      <DependentUpon>UC_CSVC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Salary.resx">
+      <DependentUpon>UC_Salary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Staff.resx">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
