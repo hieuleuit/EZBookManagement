@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookstoreManagementApp_DTO
 {
-    public class Staff_acccount
+    public class Staff_salary
     {
         private string id;
         public string ID
@@ -21,35 +21,6 @@ namespace BookstoreManagementApp_DTO
             get { return fullname; }
             set { fullname = value; }
         }
-
-        private string date_of_birth;
-        public string DOB
-        {
-            get { return date_of_birth; }
-            set { date_of_birth = value; }
-        }
-
-        private string location;
-        public string LOCA
-        {
-            get { return location; }
-            set { location = value; }
-        }
-
-        private int sex;
-        public int SEX
-        {
-            get { return sex; }
-            set { sex = value; }
-        }
-
-        private string phone_number;
-        public string PHONE
-        {
-            get { return phone_number; }
-            set { phone_number = value; }
-        }
-
 
         private int pay_rate;
         public int PAYRATE
@@ -70,7 +41,14 @@ namespace BookstoreManagementApp_DTO
         {
             get { return allowence; }
             set { allowence = value; }
-
         }
+
+        private int tongluong;
+        public int TL
+        {
+            get { return tongluong; }
+            set { tongluong = value; }
+        }
+
     }
 }
