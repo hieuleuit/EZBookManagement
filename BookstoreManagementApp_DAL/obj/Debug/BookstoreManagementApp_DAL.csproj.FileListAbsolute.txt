@@ -7,3 +7,12 @@ D:\source\Nhập môn CNPM\BookstoreManagementApp(Final)\BookstoreManagementApp_
 D:\source\Nhập môn CNPM\BookstoreManagementApp(Final)\BookstoreManagementApp_DAL\obj\Debug\BookstoreManagementApp_DAL.csproj.CopyComplete
 D:\source\Nhập môn CNPM\BookstoreManagementApp(Final)\BookstoreManagementApp_DAL\obj\Debug\BookstoreManagementApp_DAL.dll
 D:\source\Nhập môn CNPM\BookstoreManagementApp(Final)\BookstoreManagementApp_DAL\obj\Debug\BookstoreManagementApp_DAL.pdb
+D:\EZBookManagement\BookstoreManagementApp_DAL\bin\Debug\BookstoreManagementApp_DAL.dll
+D:\EZBookManagement\BookstoreManagementApp_DAL\bin\Debug\BookstoreManagementApp_DAL.pdb
+D:\EZBookManagement\BookstoreManagementApp_DAL\bin\Debug\BookstoreManagementApp_DTO.dll
+D:\EZBookManagement\BookstoreManagementApp_DAL\bin\Debug\BookstoreManagementApp_DTO.pdb
+D:\EZBookManagement\BookstoreManagementApp_DAL\obj\Debug\BookstoreManagementApp_DAL.csprojAssemblyReference.cache
+D:\EZBookManagement\BookstoreManagementApp_DAL\obj\Debug\BookstoreManagementApp_DAL.csproj.CoreCompileInputs.cache
+D:\EZBookManagement\BookstoreManagementApp_DAL\obj\Debug\BookstoreManagementApp_DAL.csproj.CopyComplete
+D:\EZBookManagement\BookstoreManagementApp_DAL\obj\Debug\BookstoreManagementApp_DAL.dll
+D:\EZBookManagement\BookstoreManagementApp_DAL\obj\Debug\BookstoreManagementApp_DAL.pdb
