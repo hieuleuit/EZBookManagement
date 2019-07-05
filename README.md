@@ -19,7 +19,7 @@
    + Về mặt bảo hành, hoàn trả sản phẩm:
      + Ứng dụng cũng cung cấp khả năng sàng lọc đối với các chính sách bảo hành của nhà sách cũng như cung cấp khả năng để nhân viên có thể  update lại những sản phẩm được hoàn trả một cách tiện lợi và nhanh chóng. Tiết kiệm được thời gian phải nhập lại mặt hàng.
      + Ứng dụng còn cung cấp khả năng sàng lọc đối với những hoá đơn đã thống kê hoặc qua giai đoạn bảo hành một thời gian để có thể giúp hạn chế sự hao hụt trong lưu trữ và có thể thu hồi lại vùng nhớ để sử dụng cho những hoá đơn mua bán mới hơn. 
-   + Ngoài ra ứng dụng còn có khả năng phân quyền truy cập giúp đảm bảo được tính bảo mật cho khách hàng sử dụng. 
+     + Ngoài ra ứng dụng còn có khả năng phân quyền truy cập giúp đảm bảo được tính bảo mật cho khách hàng sử dụng. 
 - Ứng dụng của chúng tôi sẽ luôn được cập nhật để phù hợp với thời đại và nhu cầu của nhà sách và đáp ứng tốt nhất cho khách hàng. 
 
 - Ứng dụng:
