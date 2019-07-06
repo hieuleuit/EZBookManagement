@@ -305,7 +305,7 @@
             // 
             this.GoodsReceivedDayDTP.CustomFormat = "dd/MM/yyyy";
             this.GoodsReceivedDayDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.GoodsReceivedDayDTP.Location = new System.Drawing.Point(713, 128);
+            this.GoodsReceivedDayDTP.Location = new System.Drawing.Point(712, 130);
             this.GoodsReceivedDayDTP.Name = "GoodsReceivedDayDTP";
             this.GoodsReceivedDayDTP.Size = new System.Drawing.Size(207, 20);
             this.GoodsReceivedDayDTP.TabIndex = 76;

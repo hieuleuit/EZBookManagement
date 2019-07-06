@@ -49,6 +49,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pn_slr.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_slr)).BeginInit();
@@ -56,6 +57,7 @@
             // 
             // pn_slr
             // 
+            this.pn_slr.Controls.Add(this.textBox1);
             this.pn_slr.Controls.Add(this.groupBox1);
             this.pn_slr.Controls.Add(this.label4);
             this.pn_slr.Controls.Add(this.label3);
@@ -269,7 +271,7 @@
             this.tb_slr_name.ReadOnly = true;
             this.tb_slr_name.Size = new System.Drawing.Size(150, 20);
             this.tb_slr_name.TabIndex = 8;
-            this.tb_slr_name.Leave += new System.EventHandler(this.tb_slr_name_Leave);
+            //this.tb_slr_name.Leave += new System.EventHandler(this.tb_slr_name_Leave);
             // 
             // label7
             // 
@@ -303,6 +305,13 @@
             this.label1.Size = new System.Drawing.Size(276, 44);
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÝ LƯƠNG";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(586, 258);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(98, 20);
+            this.textBox1.TabIndex = 45;
             // 
             // UC_Salary
             // 
@@ -343,5 +352,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

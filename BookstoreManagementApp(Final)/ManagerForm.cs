@@ -97,6 +97,17 @@ namespace BookstoreManagementApp_Final_
         private void bt_logout_Click(object sender, EventArgs e)
         {
             LoginAccountForm loginForm = new LoginAccountForm(); // Khai báo form đăng nhập để xuất khi người dùng đăng xuất tk
+            logouttime = DateTime.Now.ToString();
+            if (LoginAccountForm.who == 0)
+            {
+                EXECUTEDATAA("INSERT INTO STAFFLOG VALUES ('" + lb_mng_id.Text + "','" + LoginAccountForm.logintime + "','" + logouttime + "','0','" + data.user + "','')");
+                EXECUTEDATAA("UPDATE STAFFLOG SET WTIME = DATEDIFF(SECOND,STAFFLOG.LOGINTIME,STAFFLOG.LOGOUTTIME) WHERE STAFFLOG.LOGINTIME = '" + LoginAccountForm.logintime + "'");
+            }
+            else if (LoginAccountForm.who == 1)
+            {
+                EXECUTEDATAA("INSERT INTO STAFFLOG VALUES ('" + lb_mng_id.Text + "','" + LoginAccountForm.logintime + "','" + logouttime + "','1','" + data.user + "','')");
+                EXECUTEDATAA("UPDATE STAFFLOG SET WTIME = DATEDIFF(SECOND,STAFFLOG.LOGINTIME,STAFFLOG.LOGOUTTIME) WHERE STAFFLOG.LOGINTIME = '" + LoginAccountForm.logintime + "'");
+            }
             this.Dispose(); // Tắt form đang thao tác
             loginForm.Show(); // Xuất form đăng nhập
         }

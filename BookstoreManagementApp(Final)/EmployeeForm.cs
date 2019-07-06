@@ -38,6 +38,18 @@ namespace BookstoreManagementApp_Final_
         // Sự kiện khi người dùnng ấn nút log out tk
         private void LogoutButton_Click(object sender, EventArgs e)
         {
+            logouttime = DateTime.Now.ToString();
+            if (LoginAccountForm.who == 0)
+            {
+                ManagerForm.EXECUTEDATAA("INSERT INTO STAFFLOG VALUES ('" + lb_st_id.Text + "','" + LoginAccountForm.logintime + "','" + logouttime + "','0','" + data.user + "','')");
+                ManagerForm.EXECUTEDATAA("UPDATE STAFFLOG SET WTIME = DATEDIFF(SECOND,STAFFLOG.LOGINTIME,STAFFLOG.LOGOUTTIME) WHERE STAFFLOG.LOGINTIME = '" + LoginAccountForm.logintime + "'");
+
+            }
+            else if (LoginAccountForm.who == 1)
+            {
+                ManagerForm.EXECUTEDATAA("INSERT INTO STAFFLOG VALUES ('" + lb_st_id.Text + "','" + LoginAccountForm.logintime + "','" + logouttime + "','1','" + data.user + "','')");
+                ManagerForm.EXECUTEDATAA("UPDATE STAFFLOG SET WTIME = DATEDIFF(SECOND,STAFFLOG.LOGINTIME,STAFFLOG.LOGOUTTIME) WHERE STAFFLOG.LOGINTIME = '" + LoginAccountForm.logintime + "'");
+            }
             LoginAccountForm loginForm = new LoginAccountForm(); // Khai báo form đăng nhập để xuất khi người dùng đăng xuất tk
 
             this.Dispose(); // Tắt form đang thao tác
@@ -109,6 +121,7 @@ namespace BookstoreManagementApp_Final_
             tb = 0;
             bh = 0;
             tk = 1;
+
 
             ManageButton.BackColor = Color.SteelBlue;
             SaleButton.BackColor = Color.SteelBlue;

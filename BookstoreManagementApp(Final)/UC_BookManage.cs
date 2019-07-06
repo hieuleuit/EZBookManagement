@@ -631,6 +631,13 @@ namespace BookstoreManagementApp_Final_
         private void AddBookDataToDG()
         {
             ExistBookDG.DataSource = readBookData.ReadBookFromDatabase().Tables[0];
+
+            if(ExistBookDG.DataSource == null)
+            {
+                ExistBookDG = new DataGridView();
+
+                return;
+            }
         }
 
         private void SetHeaderText() // Hàm để sửa header text của các column khi đọc dữ liệu từ database

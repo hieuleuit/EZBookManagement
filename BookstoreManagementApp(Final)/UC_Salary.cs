@@ -116,6 +116,7 @@ namespace BookstoreManagementApp_Final_
             }
             else
             {
+                //ManagerForm.EXECUTEDATAA("UPDATE SALARY SET SLR = [BS]*[TOTALTIME]*[SALARYLV]+[ADDS]");
                 DataTable dt = ManagerForm.ReadData_slr("SELECT ID, MONTH, YEAR, TOTALTIME, BS, ADDS, SALARYLV, SLR FROM SALARY WHERE MONTH = '" + cbb_slr_m.SelectedItem.ToString() + "' AND YEAR = '" + cbb_slr_y.SelectedItem.ToString() + "'");
                 if (dt != null)
                 {
@@ -134,10 +135,17 @@ namespace BookstoreManagementApp_Final_
 
         }
 
-
         private void bt_slr_xem_Click(object sender, EventArgs e)
         {
-            Calslr();
+            try
+            {
+                //textBox1.Text = "INSERT INTO SALARY(ID, MONTH, YEAR, TOTALTIME, BS, ADDS, SALARYLV) SELECT STAFFLOG.ID, MONTH(LOGINTIME), YEAR(LOGINTIME), SUM(WTIME), STAFF.BASICRATE, STAFF.ALLOWENCE, STAFF.PAYRATE FROM STAFF, STAFFLOG WHERE MONTH(LOGINTIME) = '" + cbb_slr_m.SelectedItem.ToString() + "' AND YEAR(LOGINTIME) = '" + cbb_slr_y.SelectedItem.ToString() + "' AND STAFF.ID = STAFFLOG.ID GROUP BY STAFFLOG.ID, MONTH(LOGINTIME), YEAR(LOGINTIME), STAFF.BASICRATE, STAFF.ALLOWENCE, STAFF.PAYRATE";
+                Calslr();
+            }
+            catch
+            {
+                MessageBox.Show("Hãy chọn tháng và năm trước!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void tb_slr_name_Leave(object sender, EventArgs e)

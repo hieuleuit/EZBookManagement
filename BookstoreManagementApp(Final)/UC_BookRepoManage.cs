@@ -52,21 +52,21 @@ namespace BookstoreManagementApp_Final_
                 SaveButton.Visible = true;
 
                 // Thay đổi toạ độ các control để phù hợp với diện tích form
-                BookTitleCodeLb.Location = new Point(156, 195);
-                BookTitleCodeTxb.Location = new Point(279, 193);
-                NewBookNumLb.Location = new Point(155, 236);
-                NewBookNumberNum.Location = new Point(279, 235);
-                GoodsReceivedPlaceLb.Location = new Point(154, 277);
-                GoodsReceivedPlaceTxb.Location = new Point(279, 275);
-                InvoiceCodeLb.Location = new Point(154, 320);
-                InvoiceCodeTxb.Location = new Point(279, 315);
-                GoodsReceivedDayLb.Location = new Point(555, 190);
-                GoodsReceivedDayDTP.Location = new Point(659, 187);
-                ShipmentCodeLb.Location = new Point(551, 226);
-                ShipmentCodeTxb.Location = new Point(659, 224);
-                InventoryQuantityLb.Location = new Point(534, 263);
-                InventoryQuantityNum.Location = new Point(659, 261);
-                AddedBookRepoGB.Location = new Point(146, 370);
+                //BookTitleCodeLb.Location = new Point(156, 195);
+                //BookTitleCodeTxb.Location = new Point(279, 193);
+                //NewBookNumLb.Location = new Point(155, 236);
+                //NewBookNumberNum.Location = new Point(279, 235);
+                //GoodsReceivedPlaceLb.Location = new Point(154, 277);
+                //GoodsReceivedPlaceTxb.Location = new Point(279, 275);
+                //InvoiceCodeLb.Location = new Point(154, 320);
+                //InvoiceCodeTxb.Location = new Point(279, 315);
+                //GoodsReceivedDayLb.Location = new Point(555, 190);
+                //GoodsReceivedDayDTP.Location = new Point(659, 187);
+                //ShipmentCodeLb.Location = new Point(551, 226);
+                //ShipmentCodeTxb.Location = new Point(659, 224);
+                //InventoryQuantityLb.Location = new Point(534, 263);
+                //InventoryQuantityNum.Location = new Point(659, 261);
+                //AddedBookRepoGB.Location = new Point(146, 370);
             }
 
             // Nếu đang chọn thao tác sửa
@@ -79,21 +79,21 @@ namespace BookstoreManagementApp_Final_
                 SaveButton.Visible = true;
 
                 // Thay đổi toạ độ các control để phù hợp với diện tích form
-                BookTitleCodeLb.Location = new Point(156, 195);
-                BookTitleCodeTxb.Location = new Point(279, 193);
-                NewBookNumLb.Location = new Point(155, 236);
-                NewBookNumberNum.Location = new Point(279, 235);
-                GoodsReceivedPlaceLb.Location = new Point(154, 277);
-                GoodsReceivedPlaceTxb.Location = new Point(279, 275);
-                InvoiceCodeLb.Location = new Point(154, 320);
-                InvoiceCodeTxb.Location = new Point(279, 315);
-                GoodsReceivedDayLb.Location = new Point(555, 195);
-                GoodsReceivedDayDTP.Location = new Point(659, 193);
-                ShipmentCodeLb.Location = new Point(551, 236);
-                ShipmentCodeTxb.Location = new Point(659, 235);
-                InventoryQuantityLb.Location = new Point(534, 263);
-                InventoryQuantityNum.Location = new Point(659, 261);
-                ExistInvoiceDataGB.Location = new Point(146, 370);
+                //BookTitleCodeLb.Location = new Point(156, 195);
+                //BookTitleCodeTxb.Location = new Point(279, 193);
+                //NewBookNumLb.Location = new Point(155, 236);
+                //NewBookNumberNum.Location = new Point(279, 235);
+                //GoodsReceivedPlaceLb.Location = new Point(154, 277);
+                //GoodsReceivedPlaceTxb.Location = new Point(279, 275);
+                //InvoiceCodeLb.Location = new Point(154, 320);
+                //InvoiceCodeTxb.Location = new Point(279, 315);
+                //GoodsReceivedDayLb.Location = new Point(555, 195);
+                //GoodsReceivedDayDTP.Location = new Point(659, 193);
+                //ShipmentCodeLb.Location = new Point(551, 236);
+                //ShipmentCodeTxb.Location = new Point(659, 235);
+                //InventoryQuantityLb.Location = new Point(534, 263);
+                //InventoryQuantityNum.Location = new Point(659, 261);
+                //ExistInvoiceDataGB.Location = new Point(146, 370);
             }
 
             BookTitleCodeLb.Visible = true;
@@ -237,21 +237,21 @@ namespace BookstoreManagementApp_Final_
 
             BackButton.Location = new Point(667, 31);
 
-            // Reset lại toạ độ các control như ban đầu
-            BookTitleCodeLb.Location = new Point(190, 155);
-            BookTitleCodeTxb.Location = new Point(279, 153);
-            NewBookNumLb.Location = new Point(156, 195);
-            NewBookNumberNum.Location = new Point(279, 193);
-            GoodsReceivedPlaceLb.Location = new Point(155, 236);
-            GoodsReceivedPlaceTxb.Location = new Point(279, 235);
-            InvoiceCodeLb.Location = new Point(154, 277);
-            InvoiceCodeTxb.Location = new Point(279, 275);
-            GoodsReceivedDayLb.Location = new Point(553, 153);
-            GoodsReceivedDayDTP.Location = new Point(659, 151);
-            ShipmentCodeLb.Location = new Point(555, 190);
-            ShipmentCodeTxb.Location = new Point(659, 187);
-            InventoryQuantityLb.Location = new Point(551, 226);
-            InventoryQuantityNum.Location = new Point(659, 224);
+            //// Reset lại toạ độ các control như ban đầu
+            //BookTitleCodeLb.Location = new Point(190, 155);
+            //BookTitleCodeTxb.Location = new Point(279, 153);
+            //NewBookNumLb.Location = new Point(156, 195);
+            //NewBookNumberNum.Location = new Point(279, 193);
+            //GoodsReceivedPlaceLb.Location = new Point(155, 236);
+            //GoodsReceivedPlaceTxb.Location = new Point(279, 235);
+            //InvoiceCodeLb.Location = new Point(154, 277);
+            //InvoiceCodeTxb.Location = new Point(279, 275);
+            //GoodsReceivedDayLb.Location = new Point(553, 153);
+            //GoodsReceivedDayDTP.Location = new Point(659, 151);
+            //ShipmentCodeLb.Location = new Point(555, 190);
+            //ShipmentCodeTxb.Location = new Point(659, 187);
+            //InventoryQuantityLb.Location = new Point(551, 226);
+            //InventoryQuantityNum.Location = new Point(659, 224);
         }
 
         // Hàm để add hàng dữ liệu mới vào datagridview
@@ -591,7 +591,7 @@ namespace BookstoreManagementApp_Final_
         // Hàm để add dữ liệu đang có trong kho sách và kho hoá đơn nhập hàng vào datagridview
         private void AddBookRepoDataAndInvoiceDataToDG()
         {
-            string bookRepoQuery = "Select * from HOADON order by NGAYLAPHOD";
+            string bookRepoQuery = "Select * from HOADON order by NGAYNHAP";
             string bookRepoDataQuery = "Select * from KHOSACH";
 
             ExistBookRepoDG.DataSource = bookRepoManage.ReadBookRepoDataFromDB(bookRepoDataQuery).Tables[0];
@@ -602,6 +602,14 @@ namespace BookstoreManagementApp_Final_
                 // Disable việc datgridview tự động focus vào dòng đầu tiên để tránh việc thông tin bị đưa lên trc
                 ExistInvoiceDataDG.Rows[0].Selected = false;
                 ExistBookRepoDG.Rows[0].Selected = false;
+            }
+
+            if(ExistBookRepoDG.DataSource == null || ExistBookRepoDG.DataSource == null)
+            {
+                ExistBookRepoDG = new DataGridView();
+                ExistInvoiceDataDG = new DataGridView();
+
+                return;
             }
         }
 
