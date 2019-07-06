@@ -33,6 +33,11 @@
   + CPU: Intel Core 2 Duo or higher
   + Hệ điều hành: Windows 7, 8, 10
  
- 
+ - Hướng dẫn cài đặt:
+  + Clone source code này về
+  + Cài đặt các thư viện .NET, C
+  + Cài đặt SQL Server
+  + Chạy script Use this SQL script to create Database.sql để tạo database ban đầu
+  + Sử dụng Visual Studio để debug
  
      
