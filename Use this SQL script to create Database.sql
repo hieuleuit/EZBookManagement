@@ -273,3 +273,4 @@ insert into STAFF values ('2', 'Staff user', '1/1/1999', 'Bookstore', 0, '090900
 insert into PASSWORD values ('1', 'admin', '$2a$11$.7CzzG3Fl.hnXcSZGXEG5uLvFLZWCJySSTp5BtilcWWtk42LEGepe', 1)
 insert into PASSWORD values ('2', 'user', '$2a$11$cSiBFCxMwqbLuSIxEuS65OBqJLKmZWACuKzVA8Oi8IqakdIE3Odn6', 0)
 GO
+
