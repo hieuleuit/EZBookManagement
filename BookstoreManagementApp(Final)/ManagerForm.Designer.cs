@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerForm));
             this.lb_mng_id = new System.Windows.Forms.Label();
             this.lb_mng_fn = new System.Windows.Forms.Label();
             this.pn_main = new System.Windows.Forms.Panel();
@@ -80,7 +81,7 @@
             this.pn_main.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pn_main.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pn_main.Location = new System.Drawing.Point(185, 124);
-            this.pn_main.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pn_main.Margin = new System.Windows.Forms.Padding(2);
             this.pn_main.Name = "pn_main";
             this.pn_main.Size = new System.Drawing.Size(992, 648);
             this.pn_main.TabIndex = 12;
@@ -94,7 +95,7 @@
             this.bt_csvc.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_csvc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bt_csvc.Location = new System.Drawing.Point(0, 301);
-            this.bt_csvc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_csvc.Margin = new System.Windows.Forms.Padding(2);
             this.bt_csvc.Name = "bt_csvc";
             this.bt_csvc.Size = new System.Drawing.Size(185, 49);
             this.bt_csvc.TabIndex = 3;
@@ -113,7 +114,7 @@
             this.bt_luong.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold);
             this.bt_luong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bt_luong.Location = new System.Drawing.Point(0, 204);
-            this.bt_luong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_luong.Margin = new System.Windows.Forms.Padding(2);
             this.bt_luong.Name = "bt_luong";
             this.bt_luong.Size = new System.Drawing.Size(185, 49);
             this.bt_luong.TabIndex = 2;
@@ -132,7 +133,7 @@
             this.bt_nv.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold);
             this.bt_nv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bt_nv.Location = new System.Drawing.Point(0, 155);
-            this.bt_nv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_nv.Margin = new System.Windows.Forms.Padding(2);
             this.bt_nv.Name = "bt_nv";
             this.bt_nv.Size = new System.Drawing.Size(185, 49);
             this.bt_nv.TabIndex = 1;
@@ -166,7 +167,7 @@
             this.panel1.Controls.Add(this.bt_nv);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(185, 773);
             this.panel1.TabIndex = 0;
@@ -180,7 +181,7 @@
             this.bt_tk.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold);
             this.bt_tk.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bt_tk.Location = new System.Drawing.Point(0, 253);
-            this.bt_tk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_tk.Margin = new System.Windows.Forms.Padding(2);
             this.bt_tk.Name = "bt_tk";
             this.bt_tk.Size = new System.Drawing.Size(185, 49);
             this.bt_tk.TabIndex = 5;
@@ -199,7 +200,7 @@
             this.panel2.Controls.Add(this.lb_mng_fn);
             this.panel2.Controls.Add(this.lb_mng_id);
             this.panel2.Location = new System.Drawing.Point(9, 597);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(166, 132);
             this.panel2.TabIndex = 5;
@@ -231,7 +232,7 @@
             this.pictureBox1.BackgroundImage = global::BookstoreManagementApp_Final_.Properties.Resources.logolastttt;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(29, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(122, 106);
             this.pictureBox1.TabIndex = 4;
@@ -243,7 +244,7 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(185, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(994, 120);
             this.panel3.TabIndex = 13;
@@ -268,6 +269,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pn_main);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ManagerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

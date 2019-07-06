@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeForm));
             this.ManageButton = new System.Windows.Forms.Button();
             this.ReportButton = new System.Windows.Forms.Button();
             this.SaleButton = new System.Windows.Forms.Button();
@@ -206,7 +207,7 @@
             this.panel3.Controls.Add(this.BookAndStationaryButton);
             this.panel3.Controls.Add(this.AddStationaryButton);
             this.panel3.Location = new System.Drawing.Point(614, 11);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(367, 89);
             this.panel3.TabIndex = 28;
@@ -247,7 +248,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(185, 773);
             this.panel1.TabIndex = 30;
@@ -259,7 +260,7 @@
             this.panel2.Controls.Add(this.LogoutButton);
             this.panel2.Controls.Add(this.lb_st_id);
             this.panel2.Location = new System.Drawing.Point(9, 536);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(166, 132);
             this.panel2.TabIndex = 5;
@@ -279,7 +280,7 @@
             this.pictureBox1.BackgroundImage = global::BookstoreManagementApp_Final_.Properties.Resources.logolastttt;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(29, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(122, 106);
             this.pictureBox1.TabIndex = 4;
@@ -294,6 +295,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.main_FlowPnl);
             this.Controls.Add(this.Control_Pnl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EmployeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeForm";
