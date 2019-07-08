@@ -40,6 +40,7 @@
     + Chạy script Use this SQL script to create Database.sql để tạo database ban đầu
     + Sử dụng Visual Studio để debug
     + Thông tin đăng nhập:
+    
             + Tài khoản: admin
             + Mật khẩu: 1
             
